@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a076d0599.js"></script>
+    <link rel="stylesheet" href="sidebar_menu.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <input type="checkbox" id="check">
+    <label for="check">
+        <img src="bars3.jpg" id="btn"> 
+        <img src="crois1.jpg" id="cancel">
+    </label>
+
+    <div class="sidebar">
+        <header> Mon App </header>
+        <ul>
+            <li><a href="#"><i class="fas fa-qrcode"></i>Tableau de Bord</a></li>
+            <li><a href="#"><i class="fas fa-link"></i>Raccourcis</a></li>
+            <li><a href="#"><i class="fas fa-stream"></i>Presentation</a></li>
+            <li><a href="#"><i class="fas fa-calendar-week"></i>Evenements</a></li>
+            <li><a href="#"><i class="far fa-question-circle"></i>Services</a></li>
+        </ul>
+    </div>
+
+    <section>
+        <div class="navbar">
+            <img src="alramarkey8.jpg" class="logo">
+            <ul>
+                <li><a href="index.html"> Accueil</a></li>
+                <li><a href="portfolio.html"> Portfolio </a></li>
+                <li><a href="#"> A propose </a></li>
+                <li><a href="#"> Contact </a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <span class="text first-text"> Bienvenue  </span>
+            <span class="text sec-text"></span>
+
+            <script>
+                const text = document.querySelector(".sec-text");
+
+                const textload = () => 
+                {
+                    setTimeout(() => { text.textContent = " dans mon Site";}, 0);
+                    setTimeout(() => { text.textContent = " Alra Chefor";}, 4000);
+                }
+                textload();
+                setInterval(textload, 8000);
+            </script>
+
+            <div class="title">
+                Ma Formations 
+                <div class="slider">
+                    <div> Programation </div>
+                    <div> Bureutique </div>
+                    <div> Infographie </div>
+                </div> 
+            </div>
+            <p> 
+                velit libero alias molestias corrupti commodi earum itaque cupiditate, similique harum assumenda ratione nobis, quis cumque! 
+
+            </p>
+                <button type="button"> cliquez ici pour plus d'infos </button>
+        </div>
+    </section>
+</body>
+</html>

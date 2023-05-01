@@ -1,0 +1,428 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* typing text part */
+.content .text
+{
+    position: relative;
+    right: 80px;
+    color: rgb(51, 236, 147);
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.content .text.first-text
+{
+    color: white;
+}
+
+.text.sec-text:before
+{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(rgb(0,0,0,0.70),rgb(0,0,0,0.70)), url(office.jpg);
+    background-size: cover;
+    border-left: 2px solid transparent;
+    animation: animate 4s steps(12) infinite;
+    overflow: hidden;
+}
+
+@keyframes animate
+{
+    40%, 60%
+    {
+        left: calc(100% + 4px);
+    }
+
+    100%
+    {
+        left: 0%;
+    }
+}
+
+
+
+
+
+/* sidebar part */
+
+.sidebar
+{
+    position: fixed;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: blueviolet;
+    transition: all .5s ease;
+    z-index: 2;
+}
+
+.sidebar header
+{
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    line-height: 70px;
+    background: blueviolet;
+    user-select: none;
+}
+
+.sidebar ul a
+{
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 20px;
+    color: white;
+    padding-left: 45px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid black;
+    transition: .4s;
+}
+
+.sidebar ul li:hover a
+{
+    padding-left: 50px;
+}
+
+.sidebar ul a li
+{
+    margin-right: 16px;
+}
+
+#check
+{
+    display: none;
+}
+
+label #btn, label #cancel
+{
+    position: absolute;
+    cursor: pointer;
+    background: transparent;
+    border-radius: 3px;
+}
+
+label #btn
+{
+    left: 40px;
+    top: 200px;
+    font-size: 35px;
+    color: white;
+    padding: 6px 12px;
+    transition: all .5s;
+    width: 60px;
+}
+
+label #cancel
+{
+    z-index: 1111;
+    left: -195px;
+    top: 17px;
+    font-size: 30px;
+    color: white;
+    padding: 4px 9px;
+    transition: all .5s ease;
+    width: 40px;
+}
+
+#check:checked ~ .sidebar
+{
+    left: 0;
+}
+
+#check:checked ~ label #btn
+{
+    left: 250px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#check:checked ~ label #cancel
+{
+    left: 195px;
+}
+
+section
+{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgb(0,0,0,0.70),rgb(0,0,0,0.70)), url(office.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+/* section part */
+
+.logo
+{
+    width: 120px;
+    cursor: pointer;
+}
+
+.navbar
+{
+    width: 75%;
+    margin: auto;
+    padding: 35px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar ul li
+{
+    list-style-type: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a
+{
+    text-decoration: none;
+    color: #fff;
+    font-family: sans-serif;
+}
+
+.navbar ul li::after
+{
+    content: '';
+    height: 3px;
+    width: 0;
+    background-color: rgb(51, 236, 147);
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after
+{
+    width: 100%;
+}
+
+.content
+{
+    width: 100%;
+    position: absolute;
+    top: 60%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+
+.title
+{
+    font-size: 70px;
+    line-height: 100px;
+    font-weight: bold;
+    height: 100px;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.content p
+{
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+    font-family: sans-serif;
+    font-size: 18px;
+    width: 500px;
+}
+
+strong
+{
+    color: rgb(51, 236, 147);
+}
+
+button
+{
+    padding: 15px 25px;
+    margin: 20px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    border: 2px solid #31f2ec;
+    color: #fff;
+    cursor: pointer; 
+    background: linear-gradient(to right, transparent 50%, #31f2ec 50%);
+    background-size: 200%;
+    background-position: left;
+    transition: background-position 0.5s;
+}
+
+button:hover
+{
+    background-position: right;
+    color: #000;
+}
+
+.slider
+{
+    color: #31f2ec;
+    margin-left: 12px;
+    box-sizing: border-box;
+    animation: slider 6s linear infinite;
+}
+
+@keyframes slider
+{
+    0%
+    {
+        margin-top: -400px;
+    }
+
+    5%
+    {
+        margin-top: -200px;
+    }
+
+    30%
+    {
+        margin-top: -200px;
+    }
+
+    35%
+    {
+        margin-top: 0px;
+    }
+
+    65%
+    {
+        margin-top: 0px;
+    }
+
+    70%
+    {
+        margin-top: 200px;
+    }
+
+    100%
+    {
+        margin-top: 200px;
+    }
+}
+
+
+
+
+@media all and (max-device-width: 600px)
+{
+    /* sidebar part */
+    .sidebar
+    {
+        width: auto;
+        z-index: 2;
+    }
+
+    .sidebar ul a
+    {
+        width: auto;
+    }
+
+    label #btn
+    {
+        width: 30px;
+        top: 140px;
+    }
+
+    label #cancel
+    {
+        width: 30px;
+        top: 5px;
+
+    }
+
+    section
+    {
+        width: auto;
+    }
+
+    /* navbar part */
+    .navbar img, .navbar ul
+    {
+        margin-left: 10px;
+    }
+
+    .navbar ul
+    {
+        line-height: 25px;
+    }
+
+    .navbar ul a:hover
+    {
+        color: #31f2ec;
+    }
+
+    .content
+    {
+        width: auto;
+    }
+
+    .title
+    {
+        font-size: 20px;
+    }
+    
+    /* typing text part */
+    .content p
+    {
+        font-size: 12px;
+        width: auto;
+    }
+
+    .content .text
+    {
+        font-size: 20px;
+    }
+
+    .text.first-text
+    {
+        position: relative;
+        left: 50px;
+    }
+
+    .text.sec-text
+    {
+        top: 25px;
+        right: 50px;
+    }
+}
+
+
+@media all and (max-device-width: 322px)
+{
+    .text.first-text
+    {
+        position: relative;
+        top: 40px;
+    }
+
+    .text.sec-text
+    {
+        top: 60px;
+    }
+
+    .title
+    {
+        position: relative;
+        top: 30px;
+    }
+}
