@@ -13,7 +13,7 @@ var affichageHeure = function(){
     annee = today.getFullYear();
 
     // recuperer le mois :
-    listeMois = ['January', 'February', 'March', 'April', 'May', 'August',
+    listeMois = ['January', 'February', 'March', 'April', 'May', 'August', 'June', 'Jully',
     'September', 'October', 'November', 'December'];
     mois = listeMois[today.getMonth()]; // getMonth() donne l'index 1 comme on est en mai, ce qui donne la valeur 'February' depuis notre liste
     
